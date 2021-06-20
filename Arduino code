@@ -1,0 +1,17 @@
+void setup() {
+  Serial.begin(250000);
+  pinMode(3,OUTPUT); 
+  pinMode(2,OUTPUT);
+
+}
+
+void loop() {
+  digitalwrite(3,High);
+  digitalwrite(2,High);    
+  if((analogRead(A5)>10)){                    //reading data from analog A5 pin.
+    Serial.println(analogRead(A5));           //printing data in serial monitor.
+    Serial.flush();
+  }
+  
+  delay(10);
+  }
